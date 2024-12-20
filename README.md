@@ -11,7 +11,7 @@ pip install borgapi
 ```
 
 Requires:
-* `borgbackup`: 1.2.4
+* `borgbackup`: 1.2.8
 * `python-dotenv`: 1.0.0
 
 Supports Python 3.8 to 3.11
@@ -25,7 +25,7 @@ api = borgapi.BorgAPI(defaults={}, options={})
 # Initalize new repository
 api.init("/foo/bar", make_parent_dirs=True)
 
-# Create backup 
+# Create backup
 result = api.create("/foo/bar::backup", "/home", "/mnt/baz", json=True)
 print(result['archive']["name"]) # backup
 print(result["repository"]["location"]) # /foo/bar
